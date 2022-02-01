@@ -11,9 +11,6 @@ gem 'ffi', '~> 1.15', '>= 1.15.5'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -81,6 +78,8 @@ group :test do
   gem "webdrivers"
 end
 
-gem "devise", "~> 4.8"
+gem 'devise', github: 'heartcombo/devise', branch: 'main'
 
 gem "file_validators", "~> 3.0"
+
+gem "pg", "~> 1.3"

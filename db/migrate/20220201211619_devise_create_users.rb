@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# migration user
 class DeviseCreateUsers < ActiveRecord::Migration[7.0]
   def change
     create_table :users do |t|
@@ -34,10 +33,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       # t.datetime :locked_at
 
       t.integer :role, default: 0
-      t.string :username, null: true
-      t.string :place_name, null: true
-      t.string :phone_number, null: true
-      t.string :logo, null: true
 
       t.timestamps null: false
     end
