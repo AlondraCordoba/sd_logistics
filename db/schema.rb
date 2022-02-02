@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_220_201_212_900) do
+ActiveRecord::Schema.define(version: 20_220_202_181_115) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "evidences", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "order"
+    t.string "status", default: "Sent"
+    t.string "distributor"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
