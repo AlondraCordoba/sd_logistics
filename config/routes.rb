@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :evidences
   # devise_for :users
   root "pages#landing"
   devise_for :users, controllers: { registrations: 'users/registrations' }
