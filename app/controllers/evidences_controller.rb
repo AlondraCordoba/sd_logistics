@@ -1,5 +1,5 @@
 class EvidencesController < ApplicationController
-  before_action :set_evidence, only: %i[ show edit update destroy ]
+  before_action :set_evidence, only: %i[show edit update destroy]
 
   # GET /evidences or /evidences.json
   def index
@@ -7,8 +7,7 @@ class EvidencesController < ApplicationController
   end
 
   # GET /evidences/1 or /evidences/1.json
-  def show
-  end
+  def show; end
 
   # GET /evidences/new
   def new
@@ -16,8 +15,7 @@ class EvidencesController < ApplicationController
   end
 
   # GET /evidences/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /evidences or /evidences.json
   def create
@@ -58,13 +56,14 @@ class EvidencesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_evidence
-      @evidence = Evidence.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def evidence_params
-      params.require(:evidence).permit(:title, :description, :order, :status, :distributor)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_evidence
+    @evidence = Evidence.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def evidence_params
+    params.require(:evidence).permit(:title, :description, :order, :status, :distributor)
+  end
 end
